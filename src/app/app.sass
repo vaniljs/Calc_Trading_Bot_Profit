@@ -1,0 +1,181 @@
+$blue: #2C65E1
+$gray: #D8DDE8
+
+@font-face
+    font-family: 'Neometric'
+    src: url('../fonts/Neometric-Regular.woff')
+    font-weight: 400
+    font-style: normal
+    font-stretch: normal
+    unicode-range: U+0020-2044
+
+@font-face
+    font-family: 'Roboto'
+    src: url('../fonts/Roboto-regular.ttf')
+    font-weight: 400
+    font-style: normal
+    font-stretch: normal
+    unicode-range: U+0020-2044
+
+@font-face
+    font-family: 'SFProDisplay'
+    src: url('../fonts/SFProDisplay-Regular.woff')
+    font-weight: 400
+    font-style: normal
+    font-stretch: normal
+    unicode-range: U+0020-2044
+
+*
+    box-sizing: border-box
+    outline: none
+
+p
+    padding: 0
+    margin: 0
+
+h1
+    font-family: 'Neometric', sans-serif
+    font-size: 36px
+    max-width: 511px
+    text-align: center
+    margin: 0 auto 50px auto
+
+img
+    width: 100px
+    user-select: none
+
+.rc-slider *
+    user-select: none
+
+.rc-slider-step
+    height: 8px
+    border-radius: 25px
+
+.rc-slider-track
+    background-color: $blue
+
+.rc-slider-handle
+    position: relative
+    height: 22px
+    width: 22px
+    background-color: #fff
+    border: 2px solid $gray !important
+    margin-top: -8px
+
+.rc-slider-handle:before
+    content: ''
+    display: block
+    position: absolute
+    top: 2px
+    left: 2px
+    width: 14px
+    height: 14px
+    background-color: $blue
+    border-radius: 50%
+
+.rc-slider-handle:hover
+    border: 2px solid $gray !important
+
+.rc-slider-handle:active
+    border: 2px solid $gray !important
+    box-shadow: none
+
+
+.saaCalc
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+
+.blockSliders
+    display: flex
+    flex-wrap: wrap
+    align-content: space-between
+    max-width: 436px
+    width: 100%
+    margin-right: 24px
+    text-align: center
+    letter-spacing: 1px
+    font-family: 'SFProDisplay',sans-serif
+    > div
+        height: 136px
+        width: 100%
+        padding: 30px
+        background-color: #F7F8FC
+        p
+            font-size: 15px
+            margin-bottom: 9px
+        .price
+            font-size: 18px
+            font-weight: bold
+            margin-bottom: 23px
+
+
+.blockResult
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    text-align: center
+    width: 680px
+.cardResult
+    border: 1px solid #EEEEEE
+    padding: 24px
+    font-family: 'Neometric',sans-serif
+    width: 338px
+    .cardTitle
+        font-weight: bold
+        font-size: 16px
+        margin-bottom: 15px
+        span
+            color: $blue
+    .resultColumn
+        display: flex
+        align-items: end
+        justify-content: center
+        .onInvoice
+            width: 110px
+            margin-right: 5px
+            .invoiceColumn
+                display: flex
+                align-items: center
+                justify-content: center
+                height: 108px
+                background: linear-gradient(180deg, #2C65E1 0%, #124DCB 100%)
+                font-size: 14px
+                color: #fff
+                letter-spacing: 1px
+                margin-bottom: 7px
+            .invoiceTitle
+                font-family: 'SFProDisplay', sans-serif
+                text-transform: uppercase
+                font-size: 10px
+                color: #777
+                font-weight: bold
+
+        .profit
+            width: 110px
+            .profitColumn
+                display: flex
+                align-items: center
+                justify-content: center
+                height: 67px
+                background: linear-gradient(180deg, #585656 0%, #333333 100%)
+                font-size: 14px
+                color: #fff
+                letter-spacing: 1px
+                margin-bottom: 7px
+            .profitTitle
+                font-family: 'SFProDisplay', sans-serif
+                text-transform: uppercase
+                font-size: 10px
+                color: #777
+                font-weight: bold
+
+
+@media (max-width: 991px)
+    .blockSliders
+        max-width: 100%
+        margin-right: 0
+        margin-bottom: 50px
+    .cardResult
+        width: 100%
+
