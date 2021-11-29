@@ -7,9 +7,7 @@ import { App } from './app/app';
 import './app/app.sass';
 
 
-
-
-const appElement = document.getElementById('app');
+const appElement = document.getElementById('calcTradingBot');
 
 
 ReactDOM.render(<App />, appElement)

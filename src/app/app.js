@@ -89,12 +89,15 @@ export function App() {
 
 
     function calculate() {
-        console.log('calculate()');
+
+        // Short variables because formulas from Excel are used. In order not to make a mistake, 1:1 is used
         let A2 = parseInt(state.initialInvestmentAmount.value, 10);
         let B2 = parseInt(state.monthlyReplenishment.value, 10);
         let C2 = parseInt(state.averageMonthlyReturn.value, 10)/100;
 
-        let voice3month = ((A2+A2*C2)+((A2+A2*C2+B2)*C2)+((A2+A2*C2)+((A2+A2*C2+B2)*C2)+B2)*C2);
+        let voice1month = A2+A2*C2;
+        let voice2month = voice1month+B2+(voice1month+B2)*C2;
+        let voice3month = voice2month+B2+(voice2month+B2)*C2;
         let profit3month = (voice3month-A2-B2*2);
         let voice4month = voice3month+(voice3month+B2)*C2;
         let voice5month = voice4month+(voice4month+B2)*C2;
